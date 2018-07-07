@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">瓜瓜</string>
+    <string name="rationale_sms">获取本地视频权限</string>
+    <string name="action_search">搜索</string>
+    <string name="action_refresh">刷新</string>
+    <string name="lock_tip">先解锁屏幕先</string>
+    <string name="replay">重播</string>
+    <string name="unlocked">没锁</string>
+    <string name="locked">上锁</string>
+</resources>

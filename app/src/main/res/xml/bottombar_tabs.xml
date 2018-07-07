@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <!--<tab-->
+        <!--id="@+id/tab_recents"-->
+        <!--icon="@drawable/ic_recents"-->
+        <!--title="Recents" />-->
+    <tab
+        id="@+id/tab_a"
+        icon="@drawable/ic_local"
+        title="本地" />
+    <tab
+        id="@+id/tab_b"
+        icon="@drawable/ic_net"
+        title="在线" />
+    <!--<tab-->
+        <!--id="@+id/tab_food"-->
+        <!--icon="@drawable/ic_restaurants"-->
+        <!--title="Food" />-->
+</tabs>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay" >
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/white_text_color"
+                android:text="标题"/>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+    <LinearLayout
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_gravity="center|top"
+        android:id="@+id/pb_loading_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!--<ProgressBar-->
+        <!--android:id="@+id/loading_progress"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--style="?android:attr/progressBarStyleSmall"-->
+        <!--android:layout_marginRight="@dimen/dp_4"-->
+        <!--android:indeterminateDrawable="@drawable/sample_footer_loading_progress"/>-->
+        <ProgressBar
+            android:id="@+id/loading_progress"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:indeterminate="true"
+            android:layout_marginRight="@dimen/dp_4"
+            style="?android:progressBarStyleSmall" />
+
+        <TextView
+            android:id="@+id/loading_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_4"
+            android:text="数据加载中..."
+            android:textColor="@color/text_black"
+            android:textSize="18dp" />
+    </LinearLayout>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/srl_net_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlPrimaryColor="@color/md_light_blue_A400"
+        app:srlAccentColor="@android:color/holo_purple"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:srlEnablePreviewInEditMode="true">
+        <com.scwang.smartrefresh.header.MaterialHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_net_video"
+            android:layout_width="match_parent"
+            android:scrollbars="vertical"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+        <com.scwang.smartrefresh.layout.footer.BallPulseFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/item_bg"
+    tools:context=".activity.SearchActivity">
+    <!--<scut.carson_ho.searchview.SearchView-->
+    <!--android:id="@+id/search_view"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:searchBlockColor="#ffffff"-->
+    <!--app:searchBlockHeight="50"-->
+    <!--app:textColorSearch="#9b9b9b"-->
+    <!--app:textHintSearch="输入内容"-->
+    <!--app:textSizeSearch="5dp" />-->
+    <SearchView
+        android:layout_marginTop="6dp"
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        android:background="@drawable/searchview_line"
+        android:queryHint="搜索" />
+
+    <TextView
+        android:id="@+id/tv_no_result"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:textSize="18sp"
+        android:textColor="@color/gray_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="没有找到结果，换关键词试试！！" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_view"
+        android:scrollbars="vertical"
+        android:visibility="gone">
+
+    </android.support.v7.widget.RecyclerView>
+</RelativeLayout>
